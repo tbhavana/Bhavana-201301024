@@ -1,0 +1,58 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/script_1.js"></script>
+	<script>
+	function allowDrop(ev) {
+    ev.preventDefault();
+    console.log("Hii");
+}
+
+function drag(ev) {
+	console.log("hey");
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+	console.log("foff");
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+    checkAnswer();
+}
+score = 0;
+function checkAnswer(){
+	var x = $('#div1 img').attr('src');
+	if(x == answerurl){
+		score = score+1;
+		document.getElementById("score-board").innerHTML = "SCORE :" + score;
+		alert("correct");
+		$("img").remove();
+	}
+	else {
+		alert("wrong!");
+		$("img").remove();
+	}
+}
+	</script>
+
+</head>	
+
+
+<body>
+<h1 id="demo">Drag and drop the correct answer(out of the options) into the empty box for the picture shown </h1>
+<button onclick="getPicture()">GET PICTURE</button>
+<div>
+	<h2 id="score-board">SCORE: 0</h2>
+</div>
+<div id="cont"></div>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" ></div>	
+<br>
+
+</body>
+
+</html>

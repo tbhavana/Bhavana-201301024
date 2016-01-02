@@ -1,0 +1,52 @@
+html,body{
+	min-height: 100%;
+	height:auto;
+}
+body{
+	background :linear-gradient( to bottom ,#339966 , #00CC66);
+	background-repeat: no-repeat;
+}
+
+h1 {
+	color:black;
+	margin-left: 20px;
+	font-size: 30px;
+	text-align: center;
+}
+
+.btn{
+   margin-left: 100px;
+   margin-top: 20px;
+}
+.container{
+	margin-top: 20px;
+}
+
+h1{
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 50px;
+}
+
+.center{
+	margin-top: 200px;
+	position: absolute;
+	vertical-align: bottom;
+	margin:auto;
+	padding: 10px;
+	font-size: 50px;
+	color: black;
+
+}
+.collapse{
+	margin-top: 20px;
+}
+.row{
+	margin-top: 50px;
+	
+}
+#score{
+	text-align: center;
+}
+#displayMessage{
+	text-align: center;
+}

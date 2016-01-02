@@ -1,0 +1,37 @@
+<html>
+<head></head>
+<body>
+	<div class="spinner-bg">
+		<div id="spinner">
+		</div>
+	</div>
+</body>
+<style>
+
+.spinner-bg{
+	
+	width:45px;
+	height:50px;
+	background:#000000;
+}
+#spinner{
+	width:44px;
+	height:41px;
+	background:url(gears.png) no-repeat;
+}
+</style>
+<script>
+ 	var currentbgx = 0;
+ 	var circle = document.getElementById("spinner");
+ 	var circleTimer = setInterval(playAnimation,100);
+
+ 	function playAnimation(){
+ 		if(circle!=null){
+ 			circle.style.backgroundPosition = currentbgx + "px 0";
+ 		}
+ 	
+ 	currentbgx -= 44;
+ 	if(currentbgx<-176){currentbgx = 0;}
+ }
+</script>
+</html>
